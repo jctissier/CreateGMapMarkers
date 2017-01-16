@@ -83,3 +83,30 @@ class CreateGoogleMapMarkers(object):
         f.write('</body>\n')
         f.write('</html>\n')
         f.close()
+
+    # Adds a lat, lng for center of map
+    def add_center_location(self, f):
+        f.write('\t\t\tvar mapCenter = new google.maps.LatLng(%f, %f, \'%s\');\n' %
+                (self.center_location[0], self.center_location[1], self.title))
+        f.write('\t\t\tvar myOptions = {\n')
+        f.write('\t\t\t\tzoom: %d,\n' % self.zoom)
+        f.write('\t\t\t\tcenter: mapCenter,\n')
+        f.write('\t\t\t\tmapTypeId: google.maps.MapTypeId.ROADMAP\n')
+        f.write('\t\t\t};\n')
+        f.write('\t\t\tvar map = new google.maps.Map(document.getElementById(\'map\'), myOptions);\n')
+        f.write('\n')
+        f.write('\t\t\tvar locationMarker = new google.maps.Marker({\n')
+        f.write('\t\t\t\tposition: mapCenter,\n')
+        f.write('\t\t\t\tanimation: google.maps.Animation.BOUNCE,\n')
+        f.write('\t\t\t\tmap:map,\n')
+        if self.icon == 'default':
+            self.icon = 'pins/pin.png'
+        f.write('\t\t\t\ticon: \'%s\' \n' % self.icon)
+        f.write('\t\t\t});\n')
+        f.write('\t\t\tvar locationWindow = new google.maps.InfoWindow();\n')
+        f.write('\t\t\tgoogle.maps.event.addListener(locationMarker, \'click\', (function (locationMarker) {\n')
+        f.write('\t\t\t\treturn function() {\n')
+        f.write('\t\t\t\t\tlocationWindow.setContent(\'%s\');\n' % self.title)
+        f.write('\t\t\t\t\tlocationWindow.open(map, locationMarker);\n')
+        f.write('\t\t\t\t}\n')
+        f.write('\t\t\t})(locationMarker));\n\n')
