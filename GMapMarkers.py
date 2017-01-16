@@ -110,3 +110,51 @@ class CreateGoogleMapMarkers(object):
         f.write('\t\t\t\t\tlocationWindow.open(map, locationMarker);\n')
         f.write('\t\t\t\t}\n')
         f.write('\t\t\t})(locationMarker));\n\n')
+
+    # Add marker locations based on marker color
+    def create_markers(self, latitudes, longitudes, titles, color):
+        if color == 'white':
+            self.white_lats.extend(latitudes)
+            self.white_longs.extend(longitudes)
+            if titles != "None":
+                self.white_titles.extend(titles)
+        elif color == 'red':
+            self.red_lats.extend(latitudes)
+            self.red_longs.extend(longitudes)
+            if titles != "None":
+                self.red_titles.extend(titles)
+        elif color == 'orange':
+            self.orange_lats.extend(latitudes)
+            self.orange_longs.extend(longitudes)
+            if titles != "None":
+                self.orange_titles.extend(titles)
+        elif color == 'purple':
+            self.purple_lats.extend(latitudes)
+            self.purple_longs.extend(longitudes)
+            if titles != "None":
+                self.purple_titles.extend(titles)
+        elif color == 'yellow':
+            self.yellow_lats.extend(latitudes)
+            self.yellow_longs.extend(longitudes)
+            if titles != "None":
+                self.yellow_titles.extend(titles)
+        elif color == 'blue':
+            self.blue_lats.extend(latitudes)
+            self.blue_longs.extend(longitudes)
+            if titles != "None":
+                self.blue_titles.extend(titles)
+        elif color == 'black':
+            self.black_lats.extend(latitudes)
+            self.black_longs.extend(longitudes)
+            if titles != "None":
+                self.black_titles.extend(titles)
+        elif color == 'green':
+            self.green_lats.extend(latitudes)
+            self.green_longs.extend(longitudes)
+            if titles != "None":
+                self.green_titles.extend(titles)
+        elif color == 'custom':
+            self.custom_lats.extend(latitudes)
+            self.custom_longs.extend(longitudes)
+            if titles != "None":
+                self.custom_titles.extend(titles)
