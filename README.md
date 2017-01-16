@@ -15,6 +15,16 @@ map = CreateGMapMarkers(map_center_latitude, map_center_longitude, zoom_level, m
 # *map_center_icon* = 'none' for no markers, 'default' for pin seen in example below, 'picture_name.extension' found in icons folder 
 # *map_center_icon_title* = Marker title if it exists, can pass HTML content
 ```
+3. Set your Google Maps API Key, [Found Here](https://developers.google.com/maps/documentation/javascript/get-api-key)
+```
+map.set_api_key('Add_your_API_Key')
+```
+4. Create your markers
+
+5. Generate HTML file
+```
+map.map_markers('HTML file name')        # No need to add .html
+```
 
 
 ## Example: 
