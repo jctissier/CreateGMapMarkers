@@ -250,3 +250,25 @@ class CreateGoogleMapMarkers(object):
         f.write('\t\t\t\t\t}\n')
         f.write('\t\t\t\t})(%s_marker, i));\n' % color)
         f.write('\t\t\t}\n\n')
+
+   @staticmethod
+    def add_locations_markers(f, latitudes, longitudes, marker, color):
+        f.write('\t\t\tvar %s_locations = [\n' % color)
+        for x in range(len(longitudes)):
+            if x != len(longitudes) - 1:
+                f.write('\t\t\t\t[%f, %f], \n' % (float(latitudes[x]), float(longitudes[x])))
+            else:
+                f.write('\t\t\t\t[%f, %f] \n' % (float(latitudes[x]), float(longitudes[x])))
+        f.write('\t\t\t];\n')
+        f.write('\n')
+        f.write('\t\t\tvar %s_marker, i;\n' % color)
+        f.write('\t\t\tfor (i = 0; i < %s_locations.length; i++) {\n' % color)
+        f.write('\t\t\t\t%s_marker = new google.maps.Marker({\n' % color)
+        f.write(
+            '\t\t\t\t\tposition: new google.maps.LatLng(%s_locations[i][0], %s_locations[i][1]),\n' % (color, color))
+        f.write('\t\t\t\t\tanimation: google.maps.Animation.DROP,\n')
+        f.write('\t\t\t\t\tmap: map,\n')
+        f.write('\t\t\t\t\ticon: \'%s\'\n' % marker)
+        f.write('\t\t\t\t});\n')
+        f.write('\t\t\t}\n')
+        f.write('\n')
