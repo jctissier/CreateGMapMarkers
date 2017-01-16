@@ -44,3 +44,8 @@ class CreateGoogleMapMarkers(object):
         self.custom_lats = []
         self.custom_longs = []
         self.custom_titles =[]
+
+    @staticmethod
+    def set_api_key(key):
+        global API_KEY
+        API_KEY = key
