@@ -23,7 +23,7 @@ map = CreateGMapMarkers(map_center_latitude, map_center_longitude, zoom_level, m
 map.set_api_key('Add_your_API_Key')
 </pre>
 
-<li><b>Create your markers</b></li>
+<li><b>Create your markers (As many as you need)</b></li>
 Latitudes/longitudes/titles take a list of coordinates, must be of same length or it won't create the markers.
 <ul>
 <i>There are 8 choices of colors for the markers:</i>
