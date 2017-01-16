@@ -158,3 +158,67 @@ class CreateGoogleMapMarkers(object):
             self.custom_longs.extend(longitudes)
             if titles != "None":
                 self.custom_titles.extend(titles)
+
+    def set_white_markers(self, f):
+        if len(self.white_lats) == len(self.white_longs) and (len(self.white_lats) and len(self.white_longs)) != 0:
+            if len(self.white_titles) != 0:
+                self.add_locations_info(f, self.white_lats, self.white_longs,
+                                        self.white_titles, 'pins/white.png', 'white')
+            elif len(self.white_titles) == 0:
+                self.add_locations_markers(f, self.white_lats, self.white_longs, 'pins/white.png', 'white')
+
+    def set_red_markers(self, f):
+        if len(self.red_lats) == len(self.red_longs) and (len(self.red_lats) and len(self.red_longs)) != 0:
+            if len(self.red_titles) != 0:
+                self.add_locations_info(f, self.red_lats, self.red_longs,
+                                        self.red_titles, '', 'red')
+            elif len(self.red_titles) == 0:
+                self.add_locations_markers(f, self.red_lats, self.red_longs, '', 'red')
+
+    def set_orange_markers(self, f):
+        if len(self.orange_lats) == len(self.orange_longs) and (len(self.orange_lats) and len(self.orange_longs)) != 0:
+            if len(self.orange_titles) != 0:
+                self.add_locations_info(f, self.orange_lats, self.orange_longs,
+                                        self.orange_titles, 'pins/orange.png', 'orange')
+            elif len(self.orange_titles) == 0:
+                self.add_locations_markers(f, self.orange_lats, self.orange_longs, 'pins/orange.png', 'orange')
+
+    def set_purple_markers(self, f):
+        if len(self.purple_lats) == len(self.purple_longs) and (len(self.purple_lats) and len(self.purple_longs)) != 0:
+            if len(self.purple_titles) != 0:
+                self.add_locations_info(f, self.purple_lats, self.purple_longs,
+                                        self.purple_titles, 'pins/purple.png', 'purple')
+            elif len(self.purple_titles) == 0:
+                self.add_locations_markers(f, self.purple_lats, self.purple_longs, 'pins/purple.png', 'purple')
+
+    def set_yellow_markers(self, f):
+        if len(self.yellow_lats) == len(self.yellow_longs) and (len(self.yellow_lats) and len(self.yellow_longs)) != 0:
+            if len(self.yellow_titles) != 0:
+                self.add_locations_info(f, self.yellow_lats, self.yellow_longs,
+                                        self.yellow_titles, 'pins/yellow.png', 'yellow')
+            elif len(self.yellow_titles) == 0:
+                self.add_locations_markers(f, self.yellow_lats, self.yellow_longs, 'pins/yellow.png', 'yellow')
+
+    def set_blue_markers(self, f):
+        if (len(self.blue_lats) == len(self.blue_longs)) and (len(self.blue_lats) and len(self.blue_longs)) != 0:
+            if len(self.blue_titles) != 0:
+                self.add_locations_info(f, self.blue_lats, self.blue_longs,
+                                        self.blue_titles, 'pins/blue.png', 'blue')
+            elif len(self.blue_titles) == 0:
+                self.add_locations_markers(f, self.blue_lats, self.blue_longs, 'pins/blue.png', 'blue')
+
+    def set_black_markers(self, f):
+        if len(self.black_lats) == len(self.black_longs) and (len(self.black_lats) and len(self.black_longs)) != 0:
+            if len(self.black_titles) != 0:
+                self.add_locations_info(f, self.black_lats, self.black_longs,
+                                        self.black_titles, 'pins/black.png', 'black')
+            elif len(self.black_titles) == 0:
+                self.add_locations_markers(f, self.black_lats, self.black_longs, 'pins/black.png', 'black')
+
+    def set_green_markers(self, f):
+        if len(self.green_lats) == len(self.green_longs) and (len(self.green_lats) and len(self.green_longs)) != 0:
+            if len(self.green_titles) != 0:
+                self.add_locations_info(f, self.green_lats, self.green_longs,
+                                        self.green_titles, 'pins/green.png', 'green')
+            elif len(self.green_titles) == 0:
+                self.add_locations_markers(f, self.green_lats, self.green_longs, 'pins/green.png', 'green')
