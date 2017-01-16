@@ -42,5 +42,5 @@ test.create_markers(red_lat2, red_lon2, red_titles2, 'red')
 test.map_markers('test')
 ```
 
-### Inspired by vgm64's [gmplot](https://github.com/vgm64/gmplot)
+#### Inspired by vgm64's [gmplot](https://github.com/vgm64/gmplot)
 gmplot unfortunately didn't work for my project and didn't properly map markers. I wanted to add some extra features such as adding custom icons, colorful markers and ability to map different markers at once. I felt that this would be helpful for Hackathon situations and quickly creating custom maps. 
