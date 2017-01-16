@@ -18,7 +18,7 @@ map = CreateGMapMarkers(map_center_latitude, map_center_longitude, zoom_level, m
 # map_center_icon_title = Marker title if it exists, can pass HTML content
 </pre>
 
-<li><b>Set your Google Maps API Key, [Found Here][https://developers.google.com/maps/documentation/javascript/get-api-key]</b></li>
+<li><b>Set your Google Maps API Key, <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">Found Here</a></b></li>
 <pre>
 map.set_api_key('Add_your_API_Key')
 </pre>
