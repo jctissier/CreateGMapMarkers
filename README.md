@@ -3,12 +3,12 @@ Python wrapper for Google Maps API, automatically generates HTML & JS with mappe
 
 ## Generating the HTML file
 <ol>
-<li>Import package</li>
+<li><b>Import package</b></li>
 <pre>
 import creategmapmarkers
 </pre>
 
-<li>Create an instance of the object </li>
+<li><b>Create an instance of the object </b></li>
 <pre>
 map = CreateGMapMarkers(map_center_latitude, map_center_longitude, zoom_level, map_center_icon, map_center_icon_title)
 
@@ -18,12 +18,12 @@ map = CreateGMapMarkers(map_center_latitude, map_center_longitude, zoom_level, m
 # map_center_icon_title = Marker title if it exists, can pass HTML content
 </pre>
 
-<li>Set your Google Maps API Key, [Found Here](https://developers.google.com/maps/documentation/javascript/get-api-key)</li>
+<li><b>Set your Google Maps API Key, [Found Here](https://developers.google.com/maps/documentation/javascript/get-api-key)</b></li>
 <pre>
 map.set_api_key('Add_your_API_Key')
 </pre>
 
-<li>Create your markers</li>
+<li><b>Create your markers</b></li>
 Latitudes/longitudes/titles take a list of coordinates, must be of same length or it won't create the markers.
 <ul>
 <b style="text-align: left;">There are 8 choices of colors for the markers:</b>
@@ -34,7 +34,7 @@ Latitudes/longitudes/titles take a list of coordinates, must be of same length o
 create_markers(latitudes_list, longitudes_list, markers_titles_list, markers_color)
 </pre>
 
-<li>Generate HTML file</li>
+<li><b>Generate HTML file</b></li>
 <pre>
 map.map_markers('HTML file name')        # No need to add .html
 </pre>
