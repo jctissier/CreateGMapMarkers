@@ -13,7 +13,8 @@ map = CreateGoogleMapMarkers(map_center_latitude, map_center_longitude, zoom_lev
 ```
 
 
-Example Map: [test.html](http://creategmapmarkers-test.bitballoon.com/)
+## Example Map: 
+[test.html](http://creategmapmarkers-test.bitballoon.com/)
 ![alt text](http://i.imgur.com/eD7Qc28.png)
 **Raw List of Coordinates:**
 ```
