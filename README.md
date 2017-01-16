@@ -10,10 +10,10 @@ import creategmapmarkers
 ```
 map = CreateGMapMarkers(map_center_latitude, map_center_longitude, zoom_level, map_center_icon, map_center_icon_title)
 
-# map_center_latitude/longitude = single coordinate, can either be a string or a float
-# zoom_level = controls how zoomed in the map will render, ranges from 0-18
-# map_center_icon = 'none' for no markers, 'default' for pin seen in example below, 'picture_name.extension' found in icons folder 
-# map_center_icon_title = Marker title if it exists, can pass HTML content
+# *map_center_latitude/longitude* = single coordinate, can either be a string or a float
+# *zoom_level* = controls how zoomed in the map will render, ranges from 0-18
+# *map_center_icon* = 'none' for no markers, 'default' for pin seen in example below, 'picture_name.extension' found in icons folder 
+# *map_center_icon_title* = Marker title if it exists, can pass HTML content
 ```
 
 
@@ -38,7 +38,7 @@ red_titles2 = ['red 4', 'red 5']
 **Creating object & creating HTML file:**
 ```
 test = CreateGMapMarkers("49.283140", -123.115950, 16, 'none', '<b>Current Location!</b>')
-test.set_api_key('AIzaSyBXrysmCDm_vqwz6gSINY2f0X6eHJTGGQw')
+test.set_api_key('API_KEY')
 test.create_markers(red_lat, red_lon, red_titles, 'red')
 test.create_markers(black_lat, black_lon, 'None', 'black')
 test.create_markers(yellow_lat, yellow_lon, yellow_titles, 'yellow')
