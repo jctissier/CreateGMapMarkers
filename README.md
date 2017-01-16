@@ -18,7 +18,7 @@ map = CreateGMapMarkers(map_center_latitude, map_center_longitude, zoom_level, m
 # map_center_icon_title = Marker title if it exists, can pass HTML content
 </pre>
 
-<li><b>Set your Google Maps API Key, [Found Here](https://developers.google.com/maps/documentation/javascript/get-api-key)</b></li>
+<li><b>Set your Google Maps API Key, [Found Here][https://developers.google.com/maps/documentation/javascript/get-api-key]</b></li>
 <pre>
 map.set_api_key('Add_your_API_Key')
 </pre>
@@ -28,7 +28,7 @@ Latitudes/longitudes/titles take a list of coordinates, must be of same length o
 <ul>
 <i>There are 8 choices of colors for the markers:</i>
 <li>Red(original), White, Orange, Purple, Yellow, Blue, Black, Green</li>
-<li>Custom icons can be found in the ["icons" folder]()</li>
+<li>Custom icons can be found in the "icons" folder, <i>/icons/icon_name.svg</i></li>
 </ul>
 <pre>
 create_markers(latitudes_list, longitudes_list, markers_titles_list, markers_color)
