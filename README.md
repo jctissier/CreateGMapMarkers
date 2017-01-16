@@ -4,9 +4,9 @@ Python wrapper for Google Maps API, automatically generates HTML & JS with mappe
 ## Generating the HTML file
 <ol>
 <li>Import package</li>
-<code>
+<pre><code>
 import creategmapmarkers
-</code>
+</code></pre>
 
 <li>Create an instance of the object </li>
 ```
