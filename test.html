@@ -1,0 +1,106 @@
+<!-- Generated HTML file -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Google Maps Markers</title>
+	<script src="http://maps.google.com/maps/api/js?key=[API_KEY]&sensor=true_or_false&libraries=visualization" type="text/javascript"></script>
+</head>
+<body style="margin:0px; padding:0px;" onload="initialize()">
+	<div id="map" style="width: 1500px; height: 1000px;"></div>
+	<script type="text/javascript">
+		function initialize() {
+			var mapCenter = new google.maps.LatLng(49.283140, -123.115950, '<b>Current Location!</b>');
+			var myOptions = {
+				zoom: 16,
+				center: mapCenter,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(document.getElementById('map'), myOptions);
+
+			var locationMarker = new google.maps.Marker({
+				position: mapCenter,
+				animation: google.maps.Animation.BOUNCE,
+				map:map,
+				icon: 'pins/pin.png' 
+			});
+			var locationWindow = new google.maps.InfoWindow();
+			google.maps.event.addListener(locationMarker, 'click', (function (locationMarker) {
+				return function() {
+					locationWindow.setContent('<b>Current Location!</b>');
+					locationWindow.open(map, locationMarker);
+				}
+			})(locationMarker));
+
+			var black_locations = [
+				[49.284040, -123.115950], 
+				[49.283190, -123.115680] 
+			];
+
+			var black_marker, i;
+			for (i = 0; i < black_locations.length; i++) {
+				black_marker = new google.maps.Marker({
+					position: new google.maps.LatLng(black_locations[i][0], black_locations[i][1]),
+					animation: google.maps.Animation.DROP,
+					map: map,
+					icon: 'pins/black.png'
+				});
+			}
+
+			var red_locations = [
+				[49.283460, -123.116560, 'red 1'], 
+				[49.284490, -123.115000, 'red 2'], 
+				[49.284740, -123.115170, 'red 3'], 
+				[49.284790, -123.116780, 'red 4'], 
+				[49.285050, -123.116350, 'red 5'] 
+			];
+
+			var red_infowindow = new google.maps.InfoWindow();
+			var red_marker, i;
+			for (i = 0; i < red_locations.length; i++) {
+				red_marker = new google.maps.Marker({
+					position: new google.maps.LatLng(red_locations[i][0], red_locations[i][1]),
+					animation: google.maps.Animation.DROP,
+					map: map,
+					icon: ''
+				});
+
+				google.maps.event.addListener(red_marker, 'click', (function (red_marker, i) {
+					return function () {
+						red_infowindow.setContent(red_locations[i][2]);
+						red_infowindow.open(map, red_marker);
+					}
+				})(red_marker, i));
+			}
+
+			var yellow_locations = [
+				[49.284740, -123.115170, 'yellow 1'], 
+				[49.284790, -123.115240, 'yellow 2'], 
+				[49.284580, -123.114610, 'yellow 3'], 
+				[49.284580, -123.117080, 'yellow 4'] 
+			];
+
+			var yellow_infowindow = new google.maps.InfoWindow();
+			var yellow_marker, i;
+			for (i = 0; i < yellow_locations.length; i++) {
+				yellow_marker = new google.maps.Marker({
+					position: new google.maps.LatLng(yellow_locations[i][0], yellow_locations[i][1]),
+					animation: google.maps.Animation.DROP,
+					map: map,
+					icon: 'pins/yellow.png'
+				});
+
+				google.maps.event.addListener(yellow_marker, 'click', (function (yellow_marker, i) {
+					return function () {
+						yellow_infowindow.setContent(yellow_locations[i][2]);
+						yellow_infowindow.open(map, yellow_marker);
+					}
+				})(yellow_marker, i));
+			}
+
+			setMap(locationMarker);
+		}
+	</script>
+</body>
+</html>
