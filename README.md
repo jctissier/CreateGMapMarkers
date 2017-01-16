@@ -9,19 +9,20 @@ import creategmapmarkers
 </pre>
 
 <li>Create an instance of the object </li>
-```
+<pre>
 map = CreateGMapMarkers(map_center_latitude, map_center_longitude, zoom_level, map_center_icon, map_center_icon_title)
 
 # map_center_latitude/longitude = single coordinate, can either be a string or a float
 # zoom_level = controls how zoomed in the map will render, ranges from 0-18
 # map_center_icon = 'none' for no markers, 'default' for pin seen in example below, 'picture_name.extension' found in icons folder 
 # map_center_icon_title = Marker title if it exists, can pass HTML content
-```
+</pre>
 
 <li>Set your Google Maps API Key, [Found Here](https://developers.google.com/maps/documentation/javascript/get-api-key)</li>
-```
+<pre>
 map.set_api_key('Add_your_API_Key')
-```
+</pre>
+
 <li>Create your markers</li>
 Latitudes/longitudes/titles take a list of coordinates, must be of same length or it won't create the markers.
 
