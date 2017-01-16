@@ -2,7 +2,7 @@
 Python wrapper for Google Maps API, automatically generates HTML & JS with mapped markers
 
 ## Generating the HTML file
-*Import package
+1. Import package
 ```
 import creategmapmarkers
 ```
