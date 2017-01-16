@@ -222,3 +222,31 @@ class CreateGoogleMapMarkers(object):
                                         self.green_titles, 'pins/green.png', 'green')
             elif len(self.green_titles) == 0:
                 self.add_locations_markers(f, self.green_lats, self.green_longs, 'pins/green.png', 'green')
+
+    @staticmethod
+    def add_locations_info(f, latitudes, longitudes, titles, marker, color):
+        f.write('\t\t\tvar %s_locations = [\n' % color)
+        for x in range(len(longitudes)):
+            if x != len(longitudes) - 1:
+                f.write('\t\t\t\t[%f, %f, \'%s\'], \n' % (float(latitudes[x]), float(longitudes[x]), titles[x]))
+            else:
+                f.write('\t\t\t\t[%f, %f, \'%s\'] \n' % (float(latitudes[x]), float(longitudes[x]), titles[x]))
+        f.write('\t\t\t];\n')
+        f.write('\n')
+        f.write('\t\t\tvar %s_infowindow = new google.maps.InfoWindow();\n' % color)
+        f.write('\t\t\tvar %s_marker, i;\n' % color)
+        f.write('\t\t\tfor (i = 0; i < %s_locations.length; i++) {\n' % color)
+        f.write('\t\t\t\t%s_marker = new google.maps.Marker({\n' % color)
+        f.write('\t\t\t\t\tposition: new google.maps.LatLng(%s_locations[i][0], %s_locations[i][1]),\n'%(color, color))
+        f.write('\t\t\t\t\tanimation: google.maps.Animation.DROP,\n')
+        f.write('\t\t\t\t\tmap: map,\n')
+        f.write('\t\t\t\t\ticon: \'%s\'\n' % marker)
+        f.write('\t\t\t\t});\n')
+        f.write('\n')
+        f.write('\t\t\t\tgoogle.maps.event.addListener(%s_marker, \'click\', (function (%s_marker, i) {\n' % (color,color))
+        f.write('\t\t\t\t\treturn function () {\n')
+        f.write('\t\t\t\t\t\t%s_infowindow.setContent(%s_locations[i][2]);\n' % (color, color))
+        f.write('\t\t\t\t\t\t%s_infowindow.open(map, %s_marker);\n' % (color, color))
+        f.write('\t\t\t\t\t}\n')
+        f.write('\t\t\t\t})(%s_marker, i));\n' % color)
+        f.write('\t\t\t}\n\n')
