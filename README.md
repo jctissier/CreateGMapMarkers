@@ -1,7 +1,7 @@
 # CreateGMapMarkers
 Python wrapper for Google Maps API, automatically generates HTML with mapped markers
 
-## Creating object
+## Generating the HTML file
 1. Create an instance of the object 
 ```
 map = CreateGoogleMapMarkers(map_center_latitude, map_center_longitude, zoom_level, map_center_icon, map_center_icon_title)
