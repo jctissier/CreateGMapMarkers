@@ -8,7 +8,7 @@ Python wrapper for Google Maps API, automatically generates HTML & JS with mappe
 import creategmapmarkers
 ```
 
-* Create an instance of the object 
+<li>Create an instance of the object </li>
 ```
 map = CreateGMapMarkers(map_center_latitude, map_center_longitude, zoom_level, map_center_icon, map_center_icon_title)
 
@@ -18,11 +18,11 @@ map = CreateGMapMarkers(map_center_latitude, map_center_longitude, zoom_level, m
 # map_center_icon_title = Marker title if it exists, can pass HTML content
 ```
 
-* Set your Google Maps API Key, [Found Here](https://developers.google.com/maps/documentation/javascript/get-api-key)
+<li>Set your Google Maps API Key, [Found Here](https://developers.google.com/maps/documentation/javascript/get-api-key)</li>
 ```
 map.set_api_key('Add_your_API_Key')
 ```
-* Create your markers
+<li>Create your markers</li>
 Latitudes/longitudes/titles take a list of coordinates, must be of same length or it won't create the markers.
 
 There are 8 choices of colors for the markers:
@@ -33,11 +33,11 @@ There are 8 choices of colors for the markers:
 create_markers(latitudes_list, longitudes_list, markers_titles_list, markers_color)
 ```
 
-* Generate HTML file
+<li>Generate HTML file</li>
 ```
 map.map_markers('HTML file name')        # No need to add .html
 ```
-
+</ul>
 
 ## Example: 
 [test.html](http://creategmapmarkers-test.bitballoon.com/)
