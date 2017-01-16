@@ -2,7 +2,7 @@
 Python wrapper for Google Maps API, automatically generates HTML & JS with mapped markers
 
 ## Generating the HTML file
-<ul>
+<ol>
 <li>Import package</li>
 ```
 import creategmapmarkers
@@ -37,7 +37,7 @@ create_markers(latitudes_list, longitudes_list, markers_titles_list, markers_col
 ```
 map.map_markers('HTML file name')        # No need to add .html
 ```
-</ul>
+</ol>
 
 ## Example: 
 [test.html](http://creategmapmarkers-test.bitballoon.com/)
