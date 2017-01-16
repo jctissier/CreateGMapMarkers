@@ -22,6 +22,14 @@ map = CreateGMapMarkers(map_center_latitude, map_center_longitude, zoom_level, m
 map.set_api_key('Add_your_API_Key')
 ```
 * Create your markers
+Latitudes/longitudes/titles take a list of coordinates, must be of same length or it won't create the markers.
+There are 8 choices of colors for the markers:
+- Red(original), White, Orange, Purple, Yellow, Blue, Black, Green
+- Custom icons can be found in the ["icons" folder]()
+
+```
+create_markers(latitudes_list, longitudes_list, markers_titles_list, markers_color)
+```
 
 * Generate HTML file
 ```
