@@ -11,7 +11,7 @@ import creategmapmarkers
 ```
 map = CreateGMapMarkers(map_center_latitude, map_center_longitude, zoom_level, map_center_icon, map_center_icon_title)
 
-# *map_center_latitude/longitude* = single coordinate, can either be a string or a float
+# _map_center_latitude/longitude_ = single coordinate, can either be a string or a float
 # *zoom_level* = controls how zoomed in the map will render, ranges from 0-18
 # *map_center_icon* = 'none' for no markers, 'default' for pin seen in example below, 'picture_name.extension' found in icons folder 
 # *map_center_icon_title* = Marker title if it exists, can pass HTML content
