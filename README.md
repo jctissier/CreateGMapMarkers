@@ -26,6 +26,7 @@ map.set_api_key('Add_your_API_Key')
 <li><b>Create your markers (As many as you need)</b></li>
 Latitudes/longitudes/titles take a list of coordinates, must be of same length or it won't create the markers.
 <ul>
+
 <i>There are 8 choices of colors for the markers:</i>
 <li>Red(original), White, Orange, Purple, Yellow, Blue, Black, Green</li>
 <li><a href="http://map-icons.com/">All Custom icons</a> can be found in the icons folder, ex:<i><a href="https://github.com/jctissier/CreateGMapMarkers/tree/master/icons">"/icons/icon_name.svg"</a></i></li>
