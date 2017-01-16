@@ -8,7 +8,7 @@ import creategmapmarkers
 ```
 2. Create an instance of the object 
 ```
-map = CreateGoogleMapMarkers(map_center_latitude, map_center_longitude, zoom_level, map_center_icon, map_center_icon_title)
+map = CreateGMapMarkers(map_center_latitude, map_center_longitude, zoom_level, map_center_icon, map_center_icon_title)
 
 # map_center_latitude/longitude = single coordinate, can either be a string or a float
 # zoom_level = controls how zoomed in the map will render, ranges from 0-18
@@ -37,7 +37,7 @@ red_titles2 = ['red 4', 'red 5']
 ```
 **Creating object & creating HTML file:**
 ```
-test = CreateGoogleMapMarkers("49.283140", -123.115950, 16, 'none', '<b>Current Location!</b>')
+test = CreateGMapMarkers("49.283140", -123.115950, 16, 'none', '<b>Current Location!</b>')
 test.set_api_key('AIzaSyBXrysmCDm_vqwz6gSINY2f0X6eHJTGGQw')
 test.create_markers(red_lat, red_lon, red_titles, 'red')
 test.create_markers(black_lat, black_lon, 'None', 'black')
