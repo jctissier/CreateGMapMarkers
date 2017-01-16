@@ -26,7 +26,7 @@ map.set_api_key('Add_your_API_Key')
 <li><b>Create your markers</b></li>
 Latitudes/longitudes/titles take a list of coordinates, must be of same length or it won't create the markers.
 <ul>
-<b style="text-align: left;">There are 8 choices of colors for the markers:</b>
+<i>There are 8 choices of colors for the markers:</i>
 <li>Red(original), White, Orange, Purple, Yellow, Blue, Black, Green</li>
 <li>Custom icons can be found in the ["icons" folder]()</li>
 </ul>
