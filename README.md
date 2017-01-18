@@ -74,5 +74,5 @@ test.map_markers('test')
 gmplot unfortunately didn't work for my project and didn't properly map markers. I wanted to add some extra features such as adding custom icons, colorful markers and ability to map different markers at once. I felt that this would be helpful for Hackathon situations and quickly creating custom maps. 
 
 
-Author: Jean-Claude Tissier
+<b>Author:</b> Jean-Claude Tissier<br/>
 Feel free to contribute or request new features and leave an issue if you have any problems/questions!
